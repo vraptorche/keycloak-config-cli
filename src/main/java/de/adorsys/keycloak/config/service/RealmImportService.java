@@ -25,6 +25,7 @@ import de.adorsys.keycloak.config.properties.ImportConfigProperties;
 import de.adorsys.keycloak.config.provider.KeycloakProvider;
 import de.adorsys.keycloak.config.repository.RealmRepository;
 import de.adorsys.keycloak.config.service.checksum.ChecksumService;
+import de.adorsys.keycloak.config.service.print.PrintDiffService;
 import de.adorsys.keycloak.config.service.state.StateService;
 import de.adorsys.keycloak.config.util.CloneUtil;
 import org.keycloak.representations.idm.RealmRepresentation;
@@ -83,6 +84,7 @@ public class RealmImportService {
 
     private final ImportConfigProperties importProperties;
 
+    private final PrintDiffService printDiffService;
     private final ChecksumService checksumService;
     private final StateService stateService;
 
@@ -103,7 +105,7 @@ public class RealmImportService {
             CustomImportService customImportService,
             ScopeMappingImportService scopeMappingImportService,
             ClientScopeMappingImportService clientScopeMappingImportService, IdentityProviderImportService identityProviderImportService,
-            ChecksumService checksumService,
+            PrintDiffService printDiffService, ChecksumService checksumService,
             StateService stateService) {
         this.importProperties = importProperties;
         this.keycloakProvider = keycloakProvider;
@@ -121,6 +123,7 @@ public class RealmImportService {
         this.scopeMappingImportService = scopeMappingImportService;
         this.clientScopeMappingImportService = clientScopeMappingImportService;
         this.identityProviderImportService = identityProviderImportService;
+        this.printDiffService = printDiffService;
         this.checksumService = checksumService;
         this.stateService = stateService;
     }
@@ -160,6 +163,8 @@ public class RealmImportService {
 
     private void updateRealm(RealmImport realmImport) {
         logger.debug("Updating realm '{}'...", realmImport.getRealm());
+
+        printDiffService.print(realmImport);
 
         RealmRepresentation realm = CloneUtil.deepClone(realmImport, RealmRepresentation.class, ignoredPropertiesForRealmImport);
         realmRepository.update(realm);

@@ -123,7 +123,7 @@ public class CloneUtil {
         return ret;
     }
 
-    private static <S> Map<String, Object> toMap(S object, String... ignoredProperties) {
+    public static <S> Map<String, Object> toMap(S object, String... ignoredProperties) {
         JsonNode objectAsNode = toJsonNode(object, ignoredProperties);
 
         return jsonNodeToMap(objectAsNode);

@@ -188,15 +188,13 @@ public class StateService {
         stateRepository.setState("sub-components-" + component.getName(), state);
     }
 
-    /*
     public List<AuthenticationFlowRepresentation> getTopLevelFlows(List<AuthenticationFlowRepresentation> topLevelFlows) {
-        List<Object> topLevelFlowsFromState = stateRepository.getState("top-flows");
+        List<String> topLevelFlowsFromState = stateRepository.getState("top-flows");
 
         return topLevelFlows.stream()
                 .filter(topLevelFlow -> topLevelFlowsFromState.contains(topLevelFlow.getAlias()))
                 .collect(Collectors.toList());
     }
-    */
 
     private void setTopLevelFlows(RealmImport realmImport) {
         List<AuthenticationFlowRepresentation> authenticationFlows = realmImport.getAuthenticationFlows();

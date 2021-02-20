@@ -51,6 +51,7 @@ import static de.adorsys.keycloak.config.properties.ImportConfigProperties.Impor
 import static java.lang.Boolean.TRUE;
 
 @Service
+@SuppressWarnings({"java:S1192"})
 public class ClientImportService {
     private static final String[] propertiesWithDependencies = new String[]{
             "authenticationFlowBindingOverrides",
