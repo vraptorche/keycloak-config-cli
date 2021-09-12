@@ -1,0 +1,122 @@
+{
+  "id": "art-market.eu",
+  "realm": "art-market.eu",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "USER",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "ADMIN",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "default-roles-art-market.eu",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "offline_access",
+            "uma_authorization",
+            "USER"
+          ]
+        }
+      }
+    ]
+  },
+  "groups": [],
+  "defaultRoles": [
+    "USER"
+  ],
+  "requiredCredentials": [
+    "password"
+  ],
+  "clients": [
+    {
+      "clientId": "art-market",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "redirectUris": [
+        "https://art-market.eu:8443/*",
+        "http://art-market.local:8181/*",
+        "https://art-market.local:8181/*",
+        "http://art-market.local:7171/*"
+      ],
+      "protocol": "openid-connect",
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "web-origins",
+        "role_list",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ],
+      "protocolMappers": [
+        {
+          "name": "realm roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "foo",
+            "access.token.claim": "true",
+            "claim.name": "authorities",
+            "jsonType.label": "String",
+            "multivalued": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "emil.korladinov@gmail.com",
+      "email": "emil.korladinov@gmail.com",
+      "enabled": true,
+      "firstName": "Emil",
+      "lastName": "Korladinov",
+      "realmRoles": [
+        "ADMIN"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    },
+    {
+      "username": "idm-admin@art-market.eu",
+      "email": "idm-admin@art-market.eu",
+      "enabled": true,
+      "firstName": "",
+      "lastName": "",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    }
+  ]
+}

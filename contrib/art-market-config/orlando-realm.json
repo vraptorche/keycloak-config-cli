@@ -1,0 +1,165 @@
+{
+  "id": "orlando.art-market.eu",
+  "realm": "orlando.art-market.eu",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "USER",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "orlando.art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "ADMIN",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "orlando.art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "AUTHOR",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "orlando.art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "CURATOR",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "orlando.art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "GALLERY_ADMIN",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "orlando.art-market.eu",
+        "attributes": {}
+      },
+      {
+        "name": "default-roles-orlando.art-market.eu",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "offline_access",
+            "uma_authorization",
+            "USER"
+          ]
+        }
+      }
+    ]
+  },
+  "groups": [],
+  "defaultRoles": [
+    "USER"
+  ],
+  "requiredCredentials": [
+    "password"
+  ],
+  "clients": [
+    {
+      "clientId": "orlando",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "redirectUris": [
+        "http://orlando.art-market.local:8181/*"
+      ],
+      "protocol": "openid-connect",
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "web-origins",
+        "role_list",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ],
+      "protocolMappers": [
+        {
+          "name": "realm roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "foo",
+            "access.token.claim": "true",
+            "claim.name": "authorities",
+            "jsonType.label": "String",
+            "multivalued": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "emil.korladinov@gmail.com",
+      "email": "emil.korladinov@gmail.com",
+      "enabled": true,
+      "firstName": "Emil",
+      "lastName": "Korladinov",
+      "realmRoles": [
+        "ADMIN",
+        "GALLERY_ADMIN"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ],
+      "requiredActions": [
+        "UPDATE_PASSWORD"
+      ]
+    },
+    {
+      "username": "curator@orlando.art-market.eu",
+      "email": "curator@orlando.art-market.eu",
+      "enabled": true,
+      "firstName": "El",
+      "lastName": "Curator",
+      "realmRoles": [
+        "CURATOR"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ],
+      "requiredActions": [
+        "UPDATE_PASSWORD"
+      ]
+    }
+  ]
+}
