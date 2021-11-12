@@ -1,0 +1,9 @@
+import:
+  path: contrib/oblog-config
+keycloak:
+  url: https://auth.oblog.org/
+  user: admin
+  password: passme#OBL0G12
+spring:
+  config:
+    import: classpath:application-debug.properties

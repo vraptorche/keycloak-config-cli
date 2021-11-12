@@ -1,0 +1,95 @@
+{
+  "id": "packeta.engage.cz",
+  "realm": "packeta.engage.cz",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "ROLE_USER",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "packeta.engage.cz",
+        "attributes": {}
+      },
+      {
+        "name": "ROLE_ADMIN",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "ROLE_USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "packeta.engage.cz",
+        "attributes": {}
+      }
+    ]
+  },
+  "groups": [],
+  "defaultRoles": [
+    "ROLE_USER"
+  ],
+  "requiredCredentials": [
+    "password"
+  ],
+  "clients": [
+    {
+      "clientId": "packeta-engage",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "redirectUris": [
+        "https://packeta.engage.cz:/*",
+        "https://packeta.example.com:9191/*",
+        "https://packeta.example.com:9090/*"
+      ],
+      "protocol": "openid-connect",
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "web-origins",
+        "role_list",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "emil.korladinov@gmail.com",
+      "email": "emil.korladinov@gmail.com",
+      "enabled": true,
+      "firstName": "Emil",
+      "lastName": "Korladinov",
+      "realmRoles": [
+        "ROLE_ADMIN"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    },
+    {
+      "username": "idm-admin@packeta.engage.cz",
+      "email": "idm-admin@packeta.engage.cz",
+      "enabled": true,
+      "firstName": "",
+      "lastName": "",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ version: '3'
 services:
   keycloak:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    container_name: keycloak
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin123
@@ -17,11 +18,10 @@ services:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}-legacy
     environment:
       KEYCLOAK_PASSWORD: admin123
-      KEYCLOAK_USER: admin
-      KEYCLOAK_LOGLEVEL: INFO
-      ROOT_LOGLEVEL: INFO
     volumes:
       - ./providers/:/opt/jboss/keycloak/providers/
+    networks:
+      - keycloak_net
     ports:
       - "8080:8080"
       - "8787:8787"
@@ -47,17 +47,24 @@ services:
       - "8389:389"
     volumes:
       - ./src/test/resources/embedded-ldap.ldif:/resources/embedded-ldap.ldif
+      - "-Dkeycloak.profile.feature.upload_scripts=enabled"
   keycloak-config-cli:
     build: .
     image: adorsys/keycloak-config-cli:latest
+    container_name: keycloak_cli
     depends_on:
       - keycloak
+    networks:
+      - keycloak_net
     volumes:
-      - ./contrib/example-config:/config
+      - ./contrib/art-market-config:/config
     environment:
-      - keycloak.url=http://keycloak:8080
-      - keycloak.user=admin
-      - keycloak.password=admin123
-      - keycloak.availability-check.enabled=true
-      - spring.profiles.active=dev
-      - import.cache.enabled=false
+      - KEYCLOAK_URL=http://keycloak:8080/auth/
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin123
+      - KEYCLOAK_AVAILABILITY_CHECK.enabled=true
+      - SPRING_PROFILES_ACTIVE=dev
+      - IMPORT_FORCE=false
+
+networks:
+  keycloak_net:

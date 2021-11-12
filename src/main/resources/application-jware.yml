@@ -1,0 +1,9 @@
+import:
+  path: contrib/auth-jware-config
+keycloak:
+  url: http://auth.jware.local:8080/auth/
+  user: admin
+  password: admin
+spring:
+  config:
+    import: classpath:application-debug.properties

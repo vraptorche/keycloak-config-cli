@@ -1,0 +1,95 @@
+{
+  "id": "rea.engage.cz",
+  "realm": "rea.engage.cz",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "ROLE_USER",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "rea.engage.cz",
+        "attributes": {}
+      },
+      {
+        "name": "ROLE_ADMIN",
+        "composite": true,
+        "composites": {
+          "realm": [
+            "ROLE_USER"
+          ]
+        },
+        "clientRole": false,
+        "containerId": "rea.engage.cz",
+        "attributes": {}
+      }
+    ]
+  },
+  "groups": [],
+  "defaultRoles": [
+    "ROLE_USER"
+  ],
+  "requiredCredentials": [
+    "password"
+  ],
+  "clients": [
+    {
+      "clientId": "rea-engage",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "redirectUris": [
+        "https://rea.engage.cz:/*",
+        "https://rea.engage.cz.local:9191/*",
+        "https://rea.engage.cz.local:9090/*"
+      ],
+      "protocol": "openid-connect",
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "web-origins",
+        "role_list",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "emil.korladinov@gmail.com",
+      "email": "emil.korladinov@gmail.com",
+      "enabled": true,
+      "firstName": "Emil",
+      "lastName": "Korladinov",
+      "realmRoles": [
+        "ROLE_ADMIN"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    },
+    {
+      "username": "idm-admin@rea.engage.cz",
+      "email": "idm-admin@rea.engage.cz",
+      "enabled": true,
+      "firstName": "",
+      "lastName": "",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+import:
+    cache-key: default
+    file-type: auto
+    force: false
+    managed:
+        authentication-flow: full
+        client: full
+        client-scope: full
+        component: full
+        group: full
+        identity-provider: full
+        identity-provider-mapper: full
+        required-action: full
+        role: full
+        scope-mapping: full
+        sub-component: full
+    parallel: false
+    path: contrib/art-market-config/
+    state: true
+    state-encryption-salt: 2B521C795FBE2F2425DB150CD3700BA9
+    var-substitution: false
+    var-substitution-in-variables: true
+    var-substitution-undefined-throws-exceptions: true
+keycloak:
+    availability-check:
+        enabled: false
+        retry-delay: 2s
+        timeout: 120s
+    client-id: admin-cli
+    client-secret: ''
+    grant-type: password
+    login-realm: master
+    ssl-verify: true
+    user: admin
+spring:
+    cache:
+        type: NONE
+    main:
+        banner-mode: 'off'
+        lazy-initialization: true
+        log-startup-info: true
+        web-application-type: NONE

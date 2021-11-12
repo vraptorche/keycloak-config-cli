@@ -1,0 +1,12 @@
+import:
+    path: contrib/art-market-config/
+keycloak:
+    password: admin
+    url: http://auth.jware.local:8080/auth/
+    user: admin
+spring:
+    config:
+        import: classpath:application-debug.properties
+    output:
+        ansi:
+            enabled: ALWAYS
