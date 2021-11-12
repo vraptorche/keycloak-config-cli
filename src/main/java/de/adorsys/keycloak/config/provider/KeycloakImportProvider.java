@@ -171,6 +171,9 @@ public class KeycloakImportProvider {
 
     private ImportResource readResource(Resource resource) {
         logger.debug("Loading file '{}'", resource.getFilename());
+        if (maybeMatchingExtractor.isEmpty()) {
+            throw new InvalidImportException("No resource extractor found to handle config property import.path=" + path + "! Check your settings.");
+        }
 
         try {
             resource = setupAuthentication(resource);
