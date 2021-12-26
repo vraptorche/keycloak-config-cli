@@ -1,0 +1,903 @@
+{
+  "realm": "voidmail.com",
+  "users": [
+    {
+      "createdTimestamp": 1593968902117,
+      "username": "bad.boy@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Bad",
+      "lastName": "Boy",
+      "email": "bad.boy@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1593968902374,
+          "secretData": "{\"value\":\"OUCjoIfKPsQgV45bxF7d8pTsA9Nnas8h1aPw/bgNuJkb4rAhwuNHxnyG5kYXLkj+nQXzspUcOneC8uCkBjhGgA==\",\"salt\":\"BcsBf4JpthNIc7Rm8GHGcg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "letterz-public": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1599240778687,
+      "username": "basilio.ohara@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Basilio",
+      "lastName": "O'Hara",
+      "email": "basilio.ohara@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1599240847205,
+          "secretData": "{\"value\":\"EnweSPpdq/76QFYc6fYuZXMY0L9SYBQDccsAfxGK7N8BDhr2ps+81EDyInk0vh450uWMSvW9fqAA+rushHaLEA==\",\"salt\":\"kpDRDAGvDIjOvt/XG23pag==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [
+        "VERIFY_EMAIL"
+      ],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1595397354949,
+      "username": "c.royston@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Conor",
+      "lastName": "Royston",
+      "email": "c.royston@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1595397467633,
+          "secretData": "{\"value\":\"nBzoaXdXBXrEmSzGGpzs4PoMMTtaL5ZNxXbi1rq7ScxwajjDPAmWKGQV790l1aEqRZFC3txzOqOJHw4+K8ADJQ==\",\"salt\":\"0fJC4dMUPTyTjmMkWFHR4Q==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1592132486719,
+      "username": "demo@jware.co",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Demo",
+      "lastName": "User",
+      "email": "demo@jware.co",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1592132491641,
+          "secretData": "{\"value\":\"e6B5099u5NJjz8RxByJIxn46uta21sGt8JbGYvnjc+DdgoE3AaN+dF7B+zbHANmjwjjdWUHzOX0tuREhmxpXsg==\",\"salt\":\"KYKQJmIL9Uprn+EewkAWiA==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [
+        "VERIFY_EMAIL"
+      ],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1558211943538,
+      "username": "devops@jware.co",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Dev",
+      "lastName": "Ops",
+      "email": "devops@jware.co",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1567852902199,
+          "secretData": "{\"value\":\"0dC/KkH2wps/vuLf2kCYDe237iSdW53JDuOIe+SMzjJXeBjN19paIx23DasBbOYjrTPFUua4wJRKupehlv7Udw==\",\"salt\":\"U2hmZb6AVp4h3ldt8qItXQ==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1520066011686,
+      "username": "emil.korladinov@gmail.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Emil",
+      "lastName": "Korladinov",
+      "email": "emil.korladinov@gmail.com",
+      "attributes": {
+        "FACET": [
+          "GURU"
+        ]
+      },
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1558710718319,
+          "secretData": "{\"value\":\"5V6AXwjmKu4IizqK+jkoAoNcwvpC1VSLhn0/IfvBkuqyE0OesHAUNoGTD59nAuNxsG60aO54qA4SrXoJjf/SIw==\",\"salt\":\"Imj+jx70BQLA2NFZMdskqQ==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "federatedIdentities": [
+        {
+          "identityProvider": "github",
+          "userId": "3824972",
+          "userName": "vraptorche"
+        },
+        {
+          "identityProvider": "linkedin",
+          "userId": "6hX80hEcU5",
+          "userName": "emil.korladinov@gmail.com"
+        },
+        {
+          "identityProvider": "google",
+          "userId": "116375014051862220636",
+          "userName": "emil.korladinov@gmail.com"
+        }
+      ],
+      "realmRoles": [
+        "USER",
+        "offline_access",
+        "ADMIN"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "SUPER_USER"
+        ],
+        "letterz-public": [
+          "ADMIN",
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1553765617937,
+      "username": "idm-admin",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "email": "idm-admin@voidmail.com",
+      "attributes": {
+        "skip": [
+          "true"
+        ]
+      },
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1553765945856,
+          "secretData": "{\"value\":\"Wp5wrIe44HU7eSj3jzxdV01nT5sccKix819qZSdi/GZgfLeIgi+ll/R7aMpsMGGJ+XF+OM9Ue3fIByVBpZWUEQ==\",\"salt\":\"BxwERgrBvG1PT/fs7BukKg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "uma_authorization",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "realm-management": [
+          "manage-users",
+          "query-users",
+          "impersonation"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 1571600469,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1560804092155,
+      "username": "ivan.ladov@ig-eng.org",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Ivan",
+      "lastName": "Ladov",
+      "email": "ivan.ladov@ig-eng.org",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1560804092425,
+          "secretData": "{\"value\":\"cV4aN3Ut/emdK/lkbVSRjVS+s1d4H0XNMiU8s7QC7FSGPvUCte6C7ioPNkIwxSfyxemtyz0J/XE1WtIe86anAA==\",\"salt\":\"i2P/W41HSOcZNAEr90eQFw==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1595836892652,
+      "username": "josh.red@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Josh",
+      "lastName": "Red",
+      "email": "josh.red@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1595836892981,
+          "secretData": "{\"value\":\"OQmook+xpjS8dBVsfiEEeGJ0FU7iahOJIqtVy1mE42dHoCLRBisIFUfVg7lAqFtZ++yMPxdi9JvLv5diytpXEQ==\",\"salt\":\"7pQgxtlCMvZ6+OPgYwRMWA==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1534520034865,
+      "username": "karmenche@gmail.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Karmen",
+      "lastName": "Korladinova",
+      "email": "karmenche@gmail.com",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "federatedIdentities": [
+        {
+          "identityProvider": "google",
+          "userId": "111185683935516716259",
+          "userName": "karmenche@gmail.com"
+        }
+      ],
+      "realmRoles": [
+        "USER",
+        "uma_authorization",
+        "offline_access",
+        "ADMIN"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1553082721646,
+      "username": "pavlin.zahariev@gmail.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Pavlin",
+      "lastName": "Zahariev",
+      "email": "pavlin.zahariev@gmail.com",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "federatedIdentities": [
+        {
+          "identityProvider": "google",
+          "userId": "110532351162213566050",
+          "userName": "pavlin.zahariev@gmail.com"
+        }
+      ],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1594040742417,
+      "username": "peter.kamen@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Peter",
+      "lastName": "Kamen",
+      "email": "peter.kamen@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1594041154922,
+          "secretData": "{\"value\":\"hDAtR2EUMOZrT8ER86ifRDHpDSYPED4cb9F5lbBGee98CcRb7dLUb1MnlUwuFTkyg8xmqox8SCWzhYt1MDCTzA==\",\"salt\":\"Topl9I1KTjbvF5XuqhfXoQ==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1600111656531,
+      "username": "run.dmc@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "run",
+      "lastName": "dmc",
+      "email": "run.dmc@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1600111795797,
+          "secretData": "{\"value\":\"gb0YgICJGx+zvBpFLmasZ2FlGOn9CtIz4GQ/pJVE7fZ5t768PUI6RB90cAY2zN+gr3Ry7YywJTXilJ5nJCiKcg==\",\"salt\":\"ZsME4r2EDEku2nWGPi1sAg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1593970262516,
+      "username": "san.diego@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "San",
+      "lastName": "Diego",
+      "email": "san.diego@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1593970262656,
+          "secretData": "{\"value\":\"/6UbvH3WII1fUI0QWAMgYT6bB+5A/sz84JiKrFEPHA5DAautaT3EPSUpapc4DLsaBZ7QTuZW4azXlwZgzDYNfA==\",\"salt\":\"e7h8W1xT8HootLYeQ+inVg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1553768710409,
+      "username": "service-account-admin-cli",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "email": "service-account-admin-cli@placeholder.org",
+      "serviceAccountClientId": "admin-cli",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "admin-cli": [
+          "uma_protection"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1538118251055,
+      "username": "service-account-letterz",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "email": "service-account-letterz@placeholder.org",
+      "serviceAccountClientId": "letterz",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "uma_protection",
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1567851286714,
+      "username": "service-account-letterz-client",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "email": "service-account-letterz-client@placeholder.org",
+      "serviceAccountClientId": "letterz-client",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz-client": [
+          "uma_protection"
+        ],
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1567854322943,
+      "username": "service-account-letterz-public",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "email": "service-account-letterz-public@placeholder.org",
+      "serviceAccountClientId": "letterz-public",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "letterz-public": [
+          "uma_protection"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1520274697357,
+      "username": "super",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Veloci",
+      "lastName": "Raptor",
+      "email": "vraptor@jware.co",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1560581624710,
+          "secretData": "{\"value\":\"5EFd7T3bRQ3Rgg/edY8UcZ3aSTzJEPAv6+CioNNn9WebeiHwTnThUrXBcKkmmEKB76AcSna+/xQY26J9F84WxQ==\",\"salt\":\"xve/TMNbvSbpHAgMVt/R0Q==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "uma_authorization",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "SUPER_USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1580493173827,
+      "username": "test@jware.co",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "test@jware.co",
+      "attributes": {
+        "tenantId": [
+          "letterz"
+        ]
+      },
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1592133103641,
+          "secretData": "{\"value\":\"uiIYr97umGDOyaSwu0mbf8mrp91V24+CUUI9+fMKv+GVvZsq2rx/C56Qw2HIy7q7cnQuXAkaNX5Cvq29ePds6g==\",\"salt\":\"1SZLmRRmjDT6nv+qbT/ThA==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1595438056446,
+      "username": "tom.adams@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Tom",
+      "lastName": "Adams",
+      "email": "tom.adams@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1595438305375,
+          "secretData": "{\"value\":\"jzJZtt9md2Elq/Q0w6DlblIBhM2A8bSU4uk36ct6iV12IV1/nk77kKUtao2KWm6Wcne0p27JNELFDExLXXAYnw==\",\"salt\":\"WVPW5scSBfgc7jiEoESRqg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1523467934988,
+      "username": "v.korladinov@gmail.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "firstName": "Cool",
+      "lastName": "Prase",
+      "email": "v.korladinov@gmail.com",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [
+        "VERIFY_EMAIL"
+      ],
+      "federatedIdentities": [
+        {
+          "identityProvider": "facebook",
+          "userId": "899616280236831",
+          "userName": "v.korladinov@gmail.com"
+        },
+        {
+          "identityProvider": "google",
+          "userId": "105647939275262849327",
+          "userName": "v.korladinov@gmail.com"
+        }
+      ],
+      "realmRoles": [
+        "USER"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "createdTimestamp": 1594046224001,
+      "username": "van.dyke@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Van",
+      "lastName": "Dyke",
+      "email": "van.dyke@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1594046351729,
+          "secretData": "{\"value\":\"dzxFkXnC4aGmUNBxTK6lDTxabTHRYs6v2v8jYV3nsFfnNZnqMRorUDEI4YnGc8iAqol5optlM1iVZOGgV8D/Qw==\",\"salt\":\"+Kk1a1kuXIyLuNfJQzJXtQ==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    },
+    {
+      "createdTimestamp": 1598975894895,
+      "username": "van.gelis@mailinator.com",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Van",
+      "lastName": "Gelis",
+      "email": "van.gelis@mailinator.com",
+      "credentials": [
+        {
+          "type": "password",
+          "createdDate": 1598976028856,
+          "secretData": "{\"value\":\"6mVEAw0ayWUbZPd1zpngB3FN41QglA3u6nFycEqucm/zZbKM7aaWjMnZ2MWeYocYD9c2Z+7FOkKgQE8vSTn9MA==\",\"salt\":\"FYEjcJJP2sKwBZouT8g4zg==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "USER",
+        "offline_access"
+      ],
+      "clientRoles": {
+        "letterz": [
+          "USER"
+        ],
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      },
+      "notBefore": 0,
+      "groups": [
+        "/TEST_USERS"
+      ]
+    }
+  ]
+}
