@@ -80,7 +80,8 @@
           "config": {
             "user.attribute": "foo",
             "access.token.claim": "true",
-            "claim.name": "authorities",
+            "id.token.claim": "true",
+            "claim.name": "realm_access.roles",
             "jsonType.label": "String",
             "multivalued": "true"
           }
@@ -111,6 +112,22 @@
       "enabled": true,
       "firstName": "",
       "lastName": "",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ]
+    },
+    {
+      "username": "admin@art-market.eu",
+      "email": "admin@art-market.eu",
+      "enabled": true,
+      "firstName": "Art Market",
+      "lastName": "Admin",
+      "realmRoles": [
+        "ADMIN"
+      ],
       "credentials": [
         {
           "type": "password",

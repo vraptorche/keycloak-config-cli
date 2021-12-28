@@ -6,6 +6,7 @@ import:
         authentication-flow: full
         client: full
         client-scope: full
+        client-scope-mapping: full
         component: full
         group: full
         identity-provider: full
@@ -15,11 +16,15 @@ import:
         scope-mapping: full
         sub-component: full
     parallel: false
-    path: contrib/art-market-config/
+    remove-default-role-from-user: false
+    skip-attributes-for-federated-user: false
     state: true
     state-encryption-salt: 2B521C795FBE2F2425DB150CD3700BA9
+    sync-user-federation: false
     var-substitution: false
     var-substitution-in-variables: true
+    var-substitution-prefix: $(
+    var-substitution-suffix: )
     var-substitution-undefined-throws-exceptions: true
 keycloak:
     availability-check:
@@ -32,7 +37,10 @@ keycloak:
     login-realm: master
     ssl-verify: true
     user: admin
+    version: '@keycloak.version@'
 spring:
+    autoconfigure:
+        exclude: org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
     cache:
         type: NONE
     main:

@@ -90,7 +90,7 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "http://yanay.art-market.local:8181/*",
+        "https://yanay.art-market.local:8181/*",
         "https://yanay.art-market.eu:8443/*"
       ],
       "protocol": "openid-connect",
@@ -122,7 +122,7 @@
           "config": {
             "user.attribute": "foo",
             "access.token.claim": "true",
-            "claim.name": "authorities",
+            "claim.name": "realm_access.roles",
             "jsonType.label": "String",
             "multivalued": "true"
           }
@@ -159,6 +159,25 @@
       "lastName": "Curator",
       "realmRoles": [
         "CURATOR"
+      ],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "mypass"
+        }
+      ],
+      "requiredActions": [
+        "UPDATE_PASSWORD"
+      ]
+    },
+    {
+      "username": "gallery-admin@yanay.art-market.eu",
+      "email": "gallery-admin@yanay.art-market.eu",
+      "enabled": true,
+      "firstName": "Gallery",
+      "lastName": "Admin",
+      "realmRoles": [
+        "GALLERY_ADMIN"
       ],
       "credentials": [
         {
