@@ -63,12 +63,12 @@ keycloak-config-cli supports logging in JSON format. To enable, set `SPRING_PROF
 
 ## Log level
 
-| CLI Option                          | ENV Variable                    | Description                                                                          | Default                      |
-|-------------------------------------|---------------------------------|--------------------------------------------------------------------------------------|------------------------------|
-| --logging.level.root                | LOGGING_LEVEL_ROOT              | define the root log level                                                            | `info`                       |
-| --logging.level.keycloak-config-cli | LOGGING_LEVEL_KEYCLOAKCONFIGCLI | log level of keycloak-config-cli components                                          | value of `loging.level.root` |
-| --logging.level.http                | LOGGING_LEVEL_HTTP              | log level http requests between keycloak-config-cli and Keycloak                     | value of `loging.level.root` |
-| --logging.level.realm-config        | LOGGING_LEVEL_REALMCONFIG       | if set to trace, the realm config including **sensitive information** will be logged | value of `loging.level.root` |
+| CLI Option                          | ENV Variable                    | Description                                                                          | Default                       |
+|-------------------------------------|---------------------------------|--------------------------------------------------------------------------------------|-------------------------------|
+| --logging.level.root                | LOGGING_LEVEL_ROOT              | define the root log level                                                            | `info`                        |
+| --logging.level.keycloak-config-cli | LOGGING_LEVEL_KEYCLOAKCONFIGCLI | log level of keycloak-config-cli components                                          | value of `logging.level.root` |
+| --logging.level.http                | LOGGING_LEVEL_HTTP              | log level http requests between keycloak-config-cli and Keycloak                     | value of `logging.level.root` |
+| --logging.level.realm-config        | LOGGING_LEVEL_REALMCONFIG       | if set to trace, the realm config including **sensitive information** will be logged | value of `logging.level.root` |
 
 # Supported features
 
@@ -77,9 +77,10 @@ See: [docs/FEATURES.md](./docs/FEATURES.md)
 # Compatibility with keycloak
 
 Since keycloak-config-cli 4.0 will support the latest 4 releases of keycloak, if possible.
+There are some exceptions:
 
-There are some exceptions, for example if keycloak introduce some backward compatible changes, keycloak-config-cli will cut the support, too.
-
+- keycloak-config-cli will try the keep an extended support for [RH-SSO](https://access.redhat.com/articles/2342881)
+- keycloak-config-cli will cut the support if keycloak introduces some breaking changes
 
 # Build this project
 
@@ -155,7 +156,7 @@ Additionally, the tag `maven` contains the source code and compile keycloak-conf
 Keycloak versions, that not official supported., e.g.:
 
 ```bash
-docker run --rm -ti -v $PWD:/config/ -eKEYCLOAK_VERSION=17.0.0 -eMAVEN_CLI_OPTS="-B -ntp -q" adorsys/keycloak-config-cli:edge-build
+docker run --rm -ti -v $PWD:/config/ -eKEYCLOAK_VERSION=22.0.0 -eMAVEN_CLI_OPTS="-B -ntp -q" adorsys/keycloak-config-cli:edge-build
 ```
 
 ### Docker run
@@ -169,7 +170,7 @@ docker run \
     -e KEYCLOAK_PASSWORD="<keycloak admin password>" \
     -e KEYCLOAK_AVAILABILITYCHECK_ENABLED=true \
     -e KEYCLOAK_AVAILABILITYCHECK_TIMEOUT=120s \
-    -e IMPORT_FILES='/config/*' \
+    -e IMPORT_FILES_LOCATIONS='/config/*' \
     -v <your config path>:/config \
     adorsys/keycloak-config-cli:latest
 ```
@@ -240,7 +241,7 @@ Checkout helm docs about [chart dependencies](https://helm.sh/docs/topics/charts
 |--------------------------|--------------------------|-----------------------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | --spring.profiles.active | `SPRING_PROFILES_ACTIVE` | enable spring profiles. comma separated | `-`     | [Set the Active Spring Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.properties-and-configuration.set-active-spring-profiles) |
 | --spring.config.import   | `SPRING_CONFIG_IMPORT`   | See below                               | `info`  | [Configure properties values through files](#configure-properties-values-through-files)                                                                                   |
-| --loging.level.root      | `LOGGING_LEVEL_ROOT`     | define the root log level               | `info`  | [Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.logging)                                                                        |
+| --logging.level.root     | `LOGGING_LEVEL_ROOT`     | define the root log level               | `info`  | [Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.logging)                                                                        |
 | --debug                  | `DEBUG`                  | enables debug mode of spring boot       | `false` |                                                                                                                                                                           |
 
 See [application.properties](src/main/resources/application.properties) for all available settings.

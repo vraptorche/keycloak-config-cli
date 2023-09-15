@@ -6,6 +6,81 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [5.8.0] - 2023-07-14
+
+### Added
+- Support for Keycloak 22
+
+### Changed
+- Migrated from Java EE to Jakarta EE
+- Migrated imports of javax packages to jakarta packages
+- Upgraded Spring Boot to 2.7.13
+
+## [5.7.0] - 2023-07-14
+
+### Changed
+- Refactored support for user profile updates
+- Attribute groups are now allowed in the `userProfile` property in json import. The format to import User Declarative Profile attributes (and attribute groups) has slightly changed. To migrate to the new format:
+    - transform the `userProfile` property to a JSON object with two properties: `attributes` and `groups`
+    - copy the JSON array of the old `userProfile` property to the new `userProfile.attributes` property
+    - create a new JSON array for the `userProfile.groups` property (containing the attribute groups definitions)
+    - in the end, the `userProfile` property should match the content of the "JSON editor" tab in the "Realm settings > User profile" page from the Keycloak admin console
+- Add support for managing client-policies
+
+## [5.6.1] - 2023-03-05
+
+## [5.6.0] - 2023-03-05
+
+### Added
+- Added support for keycloak 21
+
+### Changed
+- Upgraded to latest keycloak 20 bugfix version
+
+### Fixed
+- Consider all authentication subflows during updates.
+
+## [5.5.0] - 2022-11-12
+
+### Added
+- Added support for keycloak 20
+- Realm export scripts now use the new kc.sh export command
+
+### Removed
+- Support for Keycloak 16
+
+## [5.4.0] - 2022-11-07
+
+### Added
+- Added latest Keycloak 19.0.3 library
+- Added support for managing user profiles
+
+## [5.3.1] - 2022-08-02
+
+### Added
+- Added latest Keycloak 19.0.1 library
+
+## [5.3.0] - 2022-07-28
+
+### Added
+- Support for Keycloak 19
+
+### Removed
+- Support for Keycloak 15
+
+## [5.2.2] - 2022-07-25
+
+### Added
+- Added latest Keycloak 18.0.2 library
+
+### Fixed
+We now also consider auth flows referenced by post-broker login flow Identity Provider configurations for flow in-use checks.
+
+## [5.2.1] - 2022-06-20
+
+### Added
+- Added latest Keycloak 18.0.1 library
+
 ## [5.2.0] - 2022-05-06
 
 ### Added
@@ -625,7 +700,17 @@ A lot of import properties are added over the years. this major release of keycl
 
 <!-- @formatter:off -->
 
-[Unreleased]: https://github.com/adorsys/keycloak-config-cli/compare/v5.2.0...HEAD
+[Unreleased]: https://github.com/adorsys/keycloak-config-cli/compare/v5.8.0...HEAD
+[5.8.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.7.0...v5.8.0
+[5.7.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.6.1...v5.7.0
+[5.6.1]: https://github.com/adorsys/keycloak-config-cli/compare/v5.6.0...v5.6.1
+[5.6.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.5.0...v5.6.0
+[5.5.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.4.0...v5.5.0
+[5.4.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.3.1...v5.4.0
+[5.3.1]: https://github.com/adorsys/keycloak-config-cli/compare/v5.3.0...v5.3.1
+[5.3.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.2.2...v5.3.0
+[5.2.2]: https://github.com/adorsys/keycloak-config-cli/compare/v5.2.1...v5.2.2
+[5.2.1]: https://github.com/adorsys/keycloak-config-cli/compare/v5.2.0...v5.2.1
 [5.2.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/adorsys/keycloak-config-cli/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/adorsys/keycloak-config-cli/compare/v4.9.0...v5.0.0

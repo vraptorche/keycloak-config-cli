@@ -28,10 +28,13 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class RealmImport extends RealmRepresentation {
     private List<AuthenticationFlowImport> authenticationFlowImports;
+
+    private Map<String, List<Map<String, Object>>> userProfile;
 
     private String checksum;
 
@@ -47,6 +50,16 @@ public class RealmImport extends RealmRepresentation {
     @JsonSetter("authenticationFlows")
     public void setAuthenticationFlowImports(List<AuthenticationFlowImport> authenticationFlowImports) {
         this.authenticationFlowImports = authenticationFlowImports;
+    }
+
+    @SuppressWarnings("unused")
+    @JsonSetter("userProfile")
+    public void setUserProfile(Map<String, List<Map<String, Object>>> userProfile) {
+        this.userProfile = userProfile;
+    }
+
+    public Map<String, List<Map<String, Object>>> getUserProfile() {
+        return userProfile;
     }
 
     @JsonIgnore

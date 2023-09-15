@@ -56,6 +56,8 @@ public class RealmImportService {
             "requiredActions",
             "defaultDefaultClientScopes",
             "defaultOptionalClientScopes",
+            "clientProfiles",
+            "clientPolicies",
     };
 
     private static final Logger logger = LoggerFactory.getLogger(RealmImportService.class);
@@ -63,6 +65,10 @@ public class RealmImportService {
     private final RealmRepository realmRepository;
 
     private final UserImportService userImportService;
+    private final UserProfileImportService userProfileImportService;
+
+    private final ClientPoliciesImportService clientPoliciesImportService;
+
     private final RoleImportService roleImportService;
     private final ClientImportService clientImportService;
     private final ClientScopeImportService clientScopeImportService;
@@ -88,6 +94,8 @@ public class RealmImportService {
             KeycloakProvider keycloakProvider,
             RealmRepository realmRepository,
             UserImportService userImportService,
+            UserProfileImportService userProfileImportService,
+            ClientPoliciesImportService clientPoliciesImportService,
             RoleImportService roleImportService,
             ClientImportService clientImportService,
             GroupImportService groupImportService,
@@ -107,6 +115,8 @@ public class RealmImportService {
         this.keycloakProvider = keycloakProvider;
         this.realmRepository = realmRepository;
         this.userImportService = userImportService;
+        this.userProfileImportService = userProfileImportService;
+        this.clientPoliciesImportService = clientPoliciesImportService;
         this.roleImportService = roleImportService;
         this.clientImportService = clientImportService;
         this.groupImportService = groupImportService;
@@ -190,6 +200,8 @@ public class RealmImportService {
         groupImportService.importGroups(realmImport);
         defaultGroupsImportService.doImport(realmImport);
         componentImportService.doImport(realmImport);
+        userProfileImportService.doImport(realmImport);
+        clientPoliciesImportService.doImport(realmImport);
         userImportService.doImport(realmImport);
         requiredActionsImportService.doImport(realmImport);
         authenticationFlowsImportService.doImport(realmImport);
